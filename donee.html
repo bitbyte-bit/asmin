@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hello beneficiary</title>
+    <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+    <h2>hello asmin beneficiary!</h2>
+    <br><br>
+    <button class="donee">fill beneficiary form</button>
+    <p id="text1"></p>
+    <button class="home-but">go back</button>
+    <style>
+        button{
+            padding:10px 20px;
+            background-color: blue;
+            color:white;
+            border:0;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        body{
+            text-align:center;
+            background-color: white;
+            text-transform: capitalize;
+        }
+        
+    </style>
+    <script>
+        document.querySelector('.home-but').addEventListener('click',()=>{
+            window.location.href='index.html';
+        });
+        document.querySelector('.donee').addEventListener('click',()=>{
+            const pop=document.createElement('div');
+            pop.className='pop1';
+            const text=document.getElementById('text1');
+        text.innerText='donations on hold,leave a request';
+        
+            pop.appendChild(text)
+            document.body.appendChild(pop)
+            setTimeout(() => {
+                setOff()
+            }, 4000);function setOff(){
+                document.body.removeChild(pop);
+                const request=document.createElement('button');
+                request.className='request1';
+                request.innerText='request';
+                request.style.backgroundColor='blue';
+                setInterval(() => {
+                    light()
+                }, 1000);function light(){
+                    request.style.backgroundColor='red';
+                }
+                setInterval(() => {
+                    lightOut()
+                }, 2000);function lightOut(){
+                    request.style.backgroundColor='blue';
+                }
+                document.body.appendChild(request)
+                request.addEventListener('click',()=>{
+                    window.location.href="https://wa.me/+256754915817";
+                });
+            };
+        });
+    </script>
+</body>
+</html>

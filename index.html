@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>arise and shine</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body id="back-end">
+    <header class='header'>
+        <p class='title-fifth'>asmin</p>
+        <div class='lines'>
+            <li class='headers' id='home'>home</li>
+            <li class='headers' id='donate'>donate</li>
+            <li class='headers' id='donee'>beneficiary</li>
+            <li class='headers' id='contact'>contact</li>
+        </div>
+    </header><br><br><br><br><br><br><br>
+        
+    <br><br>
+    
+    <div class="box">
+        <!-----popup message-->
+    <p id="pop">
+        
+    </p>
+        
+        <!---membership popup codes-->
+        <div class="memberShip">
+            
+            <p id="form"></p>
+        </div>
+        
+
+        <div class="item">
+            <header>
+                <h1 class="h1">be merciful as your father in heaven</h1>
+            </header>
+            <br><br><br>
+            <!----------role-------------->
+            <div class="role"></div><br>
+            
+            <img src="asmin.jpg" id='asmin' role="img"/><br><br><br>
+            <br><br>
+            <p role="heading">Talk to our collectors for more information about donations</p>
+            <fieldset role="second-field">
+                <legend role="legend">registered collection offices</legend>                
+            </fieldset>
+            
+            <div role="office">
+                <div id="officer-name">mbarara head office</div><br>
+                <img src="tik.jpg" role="admin"/>
+                <p class="name">Mr.Turyahabwe Steven</p>
+                <br>
+                <a href="https://wa.me/256745307372"><button role="but" class="chat1">chat</button></a>
+                <a href="tel:(256)(745307372)"><button role="ask" id="tell1">call</button></a>
+                <a href="sms:(256)(745307372)"><button class="sms1" id="sms">sms</button></a><br><br>
+            </div><br><br><br>
+            <div role="office">
+                <div id="officer-name">Ntungamo Head Office</div><br>
+                <img src="blais.png" role="admin"/>
+                <p class="name">Mss.Birungi Blaise</p>
+                <br>
+                <a href="https://wa.me/256754915817"><button role="but" class="chat2">chat</button></a>
+                <a href="tel:(256)(754915817)"><button role="ask" id="tell2">call</button></a>
+                <a href="sms:(256)(754915817)"><button class="sms1" id="sms">sms</button></a><br><br>
+            </div><br><br><br>
+            <div role="office">
+                <div id="officer-name">Bushenyi Head Office</div><br>
+                <img src="pleasure.png" role="admin"/>
+                <p class="name">Mss.Ahimbisibwe Pleasure</p>
+                <br>
+                <a href="https://wa.me/256741236186"><button role="but" class="chat3">chat</button></a>
+                <a href="tel:(256)(741236186)"><button role="ask" id="tell3">call</button></a>
+                <a href="sms:(256)(741236186)"><button class="sms" id="sms">sms</button></a><br><br>
+            </div><br><br>
+            <button style="background:transparent;color:black;font-weight:bolder;border-radius:5px;padding:10px;">more offices >></button>
+            <br><br>
+
+            
+            </div>
+            <br><br>
+            <h3 class='heading'>Founder / Chair person</h3><img class='miss2' src='tik.jpg'/>
+            <p class='name'>Mr.Steven</p>Mr.Turyahabwe Steven has been a humanitarian for long and started the organisation with a very few number of crew members,so far so good,they have managed to help a thousands of less previllaged in different communities allover uganda.though the organisation is planning to extent its operations to abroad as stated in the objects.<br><br>
+            
+             <p id="membership"></p><br>
+            
+                <div class="list">
+                    <img class="miss3" id='asmin' src="asmin.jpg"/>
+                    
+                </div>
+            
+            <br><br><br>
+            
+            <fieldset class="section">
+                <legend class="legend">Objectives</legend><br>
+                <p id="objectives"></p>
+            </fieldset>
+            
+        </div>
+    <button id="quit">back</button><br><br>
+</div>
+    </div>  
+      <!------nav-==bottom----
+    ------------------------->
+    <br><br><div class="center">
+    <p id="sponsor"></p>
+    </div>
+    <br><br>
+
+    <div class="nav-bottom">
+        <div class="item-">
+            <p id="nav"></p><br><br>
+        <i id="facebook" class="fa fa-facebook"></i>
+        <i id="whatsapp" class="fa fa-whatsapp"></i>
+        <i id="telegram" class="fa fa-telegram"></i>
+        <i id="twitter" class="fa fa-twitter"></i>
+        <br><br><br><br>
+        <footer role="footer">
+            All copyrights reserved by ASMIN (arise and shine ministries) <br>
+            <p id="date"></p>
+            <h6>contact developer at bitbyte790@gmail.com<br>+256744749181</h6>
+        </footer>
+        </div><br><br>
+        
+    </div>
+    <a href="https://wa.me/256765003100"><div class="member">help<p id='helper'>&nbsp;i am here to help you<br>report to umar any technical problem!</p></div></a>
+
+    <script>
+        setTimeout(() => {
+            helpMe()
+        }, 5000);function helpMe(){
+            
+            document.getElementById('helper').style.height='max-Content';
+        }
+        setTimeout(() => {
+            helpEnd()
+        }, 10000);function helpEnd(){
+            document.getElementById('helper').style.width='0';
+            document.getElementById('helper').style.height='0';
+        }
+    </script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+    // Check if 'visitCount' is stored in localStorage
+    let visitCount = localStorage.getItem('visitCount');
+    
+    if (visitCount === null) {
+        // First visit
+        visitCount = 1;
+        localStorage.setItem('visitCount', visitCount);
+        createPopup('Welcome! Explore beautiful themes of Asmin.');
+    } else {
+        // Returning visit
+        visitCount = parseInt(visitCount) + 1;
+        localStorage.setItem('visitCount', visitCount);
+        createPopup(`Welcome back! I'm glad to see you here. This is your visit number ${visitCount}.`);
+    }
+
+    // Display device location
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition, showError);
+    } else {
+        createPopup("Geolocation is not supported by this browser.");
+    }
+
+    function showPosition(position) {
+        const lat = position.coords.latitude;
+        const lon = position.coords.longitude;
+        createPopup(`logged in from Latitude: ${lat}, Longitude: ${lon}`);
+    }
+
+    function showError(error) {
+        switch(error.code) {
+            case error.PERMISSION_DENIED:
+                createPopup("User denied the request for Geolocation.");
+                break;
+            case error.POSITION_UNAVAILABLE:
+                createPopup("Location information is unavailable.");
+                break;
+            case error.TIMEOUT:
+                createPopup("The request to get user location timed out.");
+                break;
+            case error.UNKNOWN_ERROR:
+                createPopup("An unknown error occurred.");
+                break;
+        }
+    }
+
+    function createPopup(message) {
+        const popup = document.createElement('div');
+        popup.style.position = 'fixed';
+        popup.style.left = '50%';
+        popup.style.top = '50%';
+        popup.style.transform = 'translate(-50%, -50%)';
+        popup.style.padding = '30px';
+        popup.style.backgroundColor = 'whitesmoke';
+        popup.style.border = '1px solid #000';
+        popUp.style.borderRadius='5px';
+        popup.style.zIndex = '1000';
+        popup.innerText = message;
+        document.body.appendChild(popup);
+
+        setTimeout(() => {
+            document.body.removeChild(popup);
+        }, 5000);
+    }
+});
+const donate1=document.getElementById('donate');
+donate1.addEventListener('click',()=>{
+window.location.href='donate.html';   
+});
+const contact=document.getElementById('contact');
+contact.addEventListener('click',()=>{
+    window.location.href='contact.html';
+});
+
+const home1=document.getElementById('home');
+home1.addEventListener('click',()=>{
+    window.location.href="index.html";
+});
+
+const donee1=document.getElementById('donee');
+donee1.addEventListener('click',()=>{
+    window.location.href="donee.html";
+})
+        </script>
+   
+    <script src="app.js"></script>
+    
+</body>
+</html>

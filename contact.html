@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contacts</title>
+</head>
+<body>
+    <h1 class="contact1">asmin contact</h1>
+    <fieldset class="black">
+        <legend class="admin">admins</legend>
+        <div class="box">
+            <div class="card">
+                <h2>miss.birungi blaise</h2>
+                <button class="chat" id="blaise">chat</button>
+            </div>
+            <div class="card">
+                <h2>mr.turyahabwe stephen</h2>
+                <button class="chat" id="stephen">chat</button>
+            </div>
+            <div class="card">
+                <h2>miss.ahimbisibwe pleasure</h2>
+                <button class="chat" id="pleasure">chat</button>
+            </div>
+        </div>
+    </fieldset>
+    <button class="quit" id="cat">x</button>
+    <script>
+
+        //quit key script
+        document.getElementById('cat').addEventListener('click',()=>{
+            window.location.href="index.html";
+        });
+    </script>
+
+    <style>
+        .quit{
+            position:fixed;
+            bottom:0;
+            border:0;
+            padding:8px 20px;
+            font-size: 30px;
+            right:0;
+            border-radius:55px 0 0 0;
+            background-color: red;
+            color:white;
+            cursor:pointer;
+        }
+        .chat{
+            padding:10px 30px;
+            border-radius: 5px;
+        }
+        h2{
+            text-transform: capitalize;
+            font-size: 20px;
+        }
+        .box{
+            padding:10px;
+            display:flex;
+            flex-wrap: wrap;
+            justify-content:center;
+        }
+        .card{
+            flex-grow: 1;
+            flex-basis: 200;
+            margin:2px;
+            padding:30px;
+            border-radius:10px;
+            color:white;
+            max-width:300px;
+            background-color:whitesmoke;
+            color:black;
+            border:1px solid grey;
+        }
+        .admin{
+            color:blue;
+            text-transform: capitalize;
+            font-weight: bold;
+        }
+        .black{
+            border-bottom: 0;
+            border-right:0;
+            border-left: 0;
+        }
+        .contact1{
+            text-transform: uppercase;
+            color:blue;
+        }
+        body{
+            background-color:white;
+            text-align: center;
+            font-family: sans-serif;
+        }
+    </style>
+</body>
+</html>

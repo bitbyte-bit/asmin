@@ -1,0 +1,20 @@
+{
+  "name": "citystore",
+  "version": "1.0.0",
+  "description": "A web application showcasing electronic devices.",
+  "main": "src/index.html",
+  "scripts": {
+    "start": "live-server src"
+  },
+  "keywords": [
+    "web",
+    "application",
+    "electronic devices"
+  ],
+  "author": "atukwasa umar",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "live-server": "^1.2.1"
+  }
+}
