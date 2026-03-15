@@ -1,47 +1,61 @@
-# My Web App
+# ASMIN (Arise and Shine Ministries)
 
-This is a simple web application showcasing electronic devices. The application features a landing page with images of five electronic devices and buttons for purchasing, adding to cart, and viewing product details.
+The site has been refactored into a **single page application (SPA)** with a Node.js/Express backend and a SQLite database for storing offices, donations, beneficiaries and contact messages.
 
-## Project Structure
+## Repository Layout
 
 ```
-my-web-app
-├── src
-│   ├── index.html          # Main HTML file for the landing page
-│   ├── styles
-│   │   └── styles.css      # CSS styles for the application
-│   ├── scripts
-│   │   └── app.js          # JavaScript for interactivity
-│   ├── pages
-│   │   ├── buy.html        # Page for purchasing products
-│   │   ├── cart.html       # Page for viewing cart items
-│   │   ├── details.html     # Page for product details
-│   └── images
-│       ├── device1.jpg     # Image of the first electronic device
-│       ├── device2.jpg     # Image of the second electronic device
-│       ├── device3.jpg     # Image of the third electronic device
-│       ├── device4.jpg     # Image of the fourth electronic device
-│       └── device5.jpg     # Image of the fifth electronic device
-├── package.json             # npm configuration file
-└── README.md                # Documentation for the project
+asmin/
+├── backend/
+│   ├── server.js           # entrypoint for Express server
+│   ├── db.js               # SQLite initialization helper
+│   ├── seed.js             # simple seeding script for initial data
+│   └── routes/             # REST API routes (offices, donors, donees, contacts)
+├── public/
+│   ├── index.html          # SPA front end with Bootstrap modals
+│   ├── styles.css          # application styles
+│   └── script.js           # client‑side JavaScript logic
+├── package.json            # project metadata & scripts
+└── README.md               # project documentation (this file)
 ```
 
-## Setup Instructions
+## Quick Start
 
-1. Clone the repository to your local machine.
-2. Navigate to the project directory.
-3. Install dependencies using npm:
-   ```
+1. Install dependencies:
+   ```bash
    npm install
    ```
-4. Open `src/index.html` in your web browser to view the landing page.
+2. Initialize and seed the database (first time only):
+   ```bash
+   node backend/seed.js
+   ```
+3. Launch the application:
+   ```bash
+   npm run start       # production
+   npm run dev         # development with nodemon
+   ```
+4. Open your browser to http://localhost:4040/
 
-## Features
+*You can override the port by setting the `PORT` environment variable.*
 
-- Display of five electronic devices with images.
-- Buttons for "Buy," "Add to Cart," and "Product Details" that navigate to their respective pages.
-- Responsive design with CSS styling for a better user experience.
+## API Endpoints
 
-## License
+| Method | Path              | Description                                    |
+|--------|-------------------|------------------------------------------------|
+| GET    | /api/offices      | Retrieve collection offices                    |
+| GET    | /api/donees       | Retrieve beneficiary list                      |
+| POST   | /api/donors       | Submit a donation form                         |
+| POST   | /api/contacts     | Send a contact message                         |
+| GET    | /api/contacts     | List received contact messages (admin)         |
+
+## Frontend Overview
+
+- Uses **Bootstrap 5** for layout and modals.
+- All navigation items open modal dialogs rather than separate pages.
+- Forms send data to the backend via `fetch` and provide feedback to users.
+
+## Notes
+
+This modernization cleans up the UI, centralizes logic in a single page, and provides a simple but robust server/database for future feature expansions.
 
 This project is open-source and available for modification and distribution.

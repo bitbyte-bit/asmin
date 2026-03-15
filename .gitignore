@@ -31,3 +31,14 @@ google-services.json
 
 # Android Profiling
 *.hprof
+
+# Node.js
+node_modules/
+npm-debug.log
+
+# SQLite database
+backend/data.sqlite
+
+# Public build artifacts
+public/assets/*
+
